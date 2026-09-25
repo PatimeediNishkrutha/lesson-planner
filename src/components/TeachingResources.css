@@ -1,0 +1,299 @@
+.teaching-resources-page {
+  min-height: 100vh;
+  background: #f7f5fb;
+  padding: 30px 40px;
+}
+
+.teaching-resources-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.teaching-resources-header .back-button {
+  border: none;
+  background: transparent;
+  color: #6b3fa0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.teaching-resources-header .back-button:hover {
+  color: #4f2b7c;
+}
+
+.teaching-resources-header h1 {
+  margin: 18px 0 6px;
+  color: #30204f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.teaching-resources-header p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+}
+
+.add-resource-button {
+  border: none;
+  border-radius: 8px;
+  background: #6b3fa0;
+  color: #ffffff;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-resource-button:hover {
+  background: #58328a;
+}
+
+.resource-form-card {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+}
+
+.resource-form-card h2 {
+  margin: 0 0 22px;
+  color: #30204f;
+  font-size: 21px;
+}
+
+.resource-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #403650;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd5e7;
+  border-radius: 8px;
+  padding: 11px 12px;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #403650;
+  background: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #6b3fa0;
+  box-shadow: 0 0 0 2px rgba(107, 63, 160, 0.08);
+}
+
+.resource-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.cancel-button,
+.save-resource-button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background: #eeeaf3;
+  color: #5d5368;
+}
+
+.cancel-button:hover {
+  background: #e3ddea;
+}
+
+.save-resource-button {
+  background: #6b3fa0;
+  color: #ffffff;
+}
+
+.save-resource-button:hover {
+  background: #58328a;
+}
+
+.resources-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.resource-card {
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+}
+
+.resource-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee8f4;
+}
+
+.resource-card-header h2 {
+  margin: 0 0 6px;
+  color: #30204f;
+  font-size: 19px;
+}
+
+.resource-card-header p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.resource-type {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f1ebf8;
+  color: #6b3fa0;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.resource-description {
+  margin-top: 18px;
+}
+
+.resource-description h3 {
+  margin: 0 0 7px;
+  color: #6b3fa0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.resource-description p {
+  margin: 0;
+  color: #5d5368;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .teaching-resources-page {
+    padding: 20px;
+  }
+
+  .teaching-resources-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-resource-button {
+    width: 100%;
+  }
+
+  .resource-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .resources-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .teaching-resources-header h1 {
+    font-size: 25px;
+  }
+
+  .resource-form-card,
+  .resource-card {
+    padding: 18px;
+  }
+
+  .resource-card-header {
+    flex-direction: column;
+  }
+}
+.selected-file {
+  color: #6b3fa0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.file-help-text {
+  color: #888;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.resource-file {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 12px;
+  background: #f7f5fb;
+  border-radius: 10px;
+}
+
+.file-icon {
+  font-size: 22px;
+}
+
+.resource-file strong {
+  color: #403650;
+  font-size: 13px;
+}
+
+.resource-file p {
+  margin: 4px 0 0;
+  color: #777;
+  font-size: 12px;
+  word-break: break-word;
+}

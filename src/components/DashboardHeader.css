@@ -1,0 +1,276 @@
+.dashboard-header {
+  height: 76px;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5eaf2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+/* ================================
+   LEFT SIDE
+================================ */
+
+.dashboard-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.school-selector,
+.academic-selector,
+.board-selector {
+  height: 40px;
+  border: 1px solid #dbe2ee;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #24324a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 13px;
+  box-sizing: border-box;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.school-selector {
+  min-width: 190px;
+}
+
+.academic-selector {
+  min-width: 105px;
+}
+
+.board-selector {
+  min-width: 80px;
+}
+
+.selector-arrow {
+  color: #718096;
+  font-size: 17px;
+  line-height: 1;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.dashboard-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 0;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.dashboard-search {
+  width: 220px;
+  height: 40px;
+  border: 1px solid #dbe2ee;
+  border-radius: 9px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.dashboard-search svg {
+  color: #8a97aa;
+  font-size: 20px;
+}
+
+.dashboard-search input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #24324a;
+  font-size: 13px;
+}
+
+.dashboard-search input::placeholder {
+  color: #8a97aa;
+}
+
+
+/* ================================
+   NOTIFICATIONS
+================================ */
+
+.dashboard-notification-button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #53627a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.dashboard-notification-button:hover {
+  background: #f1f5f9;
+}
+
+.dashboard-notification-button svg {
+  font-size: 23px;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 20px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ================================
+   ROLE SELECTOR
+================================ */
+
+.dashboard-header-right .role-selector {
+  min-width: 105px;
+  height: 40px;
+  border: 1px solid #dbe2ee;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #24324a;
+  padding: 0 10px;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+
+.dashboard-header-right .role-selector:hover {
+  border-color: #b8c4d8;
+}
+
+.dashboard-header-right .role-selector:focus {
+  border-color: #315ee8;
+  box-shadow: 0 0 0 2px rgba(49, 94, 232, 0.12);
+}
+
+
+/* ================================
+   PROFILE
+================================ */
+
+.dashboard-profile-button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: #e8efff;
+  color: #315ee8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dashboard-profile-button:hover {
+  background: #dce7ff;
+}
+
+.dashboard-profile-button svg {
+  font-size: 26px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+  .dashboard-header {
+    padding: 0 18px;
+  }
+
+  .dashboard-search {
+    width: 180px;
+  }
+
+  .school-selector {
+    min-width: 165px;
+  }
+}
+
+@media (max-width: 850px) {
+  .academic-selector,
+  .board-selector {
+    display: none;
+  }
+
+  .dashboard-search {
+    width: 170px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboard-header {
+    height: auto;
+    min-height: 70px;
+    padding: 12px;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-header-left {
+    width: 100%;
+  }
+
+  .dashboard-header-right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .school-selector {
+    width: 100%;
+  }
+
+  .dashboard-search {
+    flex: 1;
+    width: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .dashboard-header-right {
+    gap: 6px;
+  }
+
+  .dashboard-search {
+    min-width: 0;
+  }
+
+  .dashboard-header-right .role-selector {
+    min-width: 90px;
+  }
+}

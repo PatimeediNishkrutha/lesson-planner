@@ -1,0 +1,250 @@
+.lesson-reports-page {
+  min-height: 100vh;
+  background: #f7f5fb;
+  padding: 30px 40px;
+}
+
+.lesson-reports-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.lesson-reports-header .back-button {
+  border: none;
+  background: transparent;
+  color: #6b3fa0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lesson-reports-header .back-button:hover {
+  color: #4f2b7c;
+}
+
+.lesson-reports-header h1 {
+  margin: 18px 0 6px;
+  color: #30204f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.lesson-reports-header p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+}
+
+/* Summary Cards */
+
+.report-summary {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.report-summary-card {
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+}
+
+.report-summary-card span {
+  display: block;
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.report-summary-card strong {
+  color: #30204f;
+  font-size: 28px;
+}
+
+/* Overall Completion */
+
+.completion-card {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+}
+
+.completion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.completion-header h2 {
+  margin: 0 0 6px;
+  color: #30204f;
+  font-size: 20px;
+}
+
+.completion-header p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.completion-header > strong {
+  color: #6b3fa0;
+  font-size: 30px;
+}
+
+/* Progress Bars */
+
+.progress-background {
+  width: 100%;
+  height: 10px;
+  background: #eeeaf3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #6b3fa0;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+/* Subject and Class Sections */
+
+.report-sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.report-section-card {
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+}
+
+.report-section-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee8f4;
+}
+
+.report-section-header h2 {
+  margin: 0 0 6px;
+  color: #30204f;
+  font-size: 19px;
+}
+
+.report-section-header p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.progress-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.progress-item-header strong {
+  color: #403650;
+  font-size: 14px;
+}
+
+.progress-item-header span {
+  color: #6b3fa0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.progress-item small {
+  display: block;
+  margin-top: 6px;
+  color: #888;
+  font-size: 11px;
+}
+
+.report-empty {
+  text-align: center;
+  padding: 40px 15px;
+}
+
+.report-empty h3 {
+  margin: 0 0 8px;
+  color: #403650;
+  font-size: 16px;
+}
+
+.report-empty p {
+  margin: 0;
+  color: #888;
+  font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .lesson-reports-page {
+    padding: 25px;
+  }
+
+  .report-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .report-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .lesson-reports-page {
+    padding: 20px;
+  }
+
+  .lesson-reports-header h1 {
+    font-size: 25px;
+  }
+
+  .report-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .completion-card,
+  .report-section-card,
+  .report-summary-card {
+    padding: 18px;
+  }
+
+  .completion-header {
+    align-items: flex-start;
+  }
+
+  .completion-header > strong {
+    font-size: 24px;
+  }
+}

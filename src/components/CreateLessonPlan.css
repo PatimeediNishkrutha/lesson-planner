@@ -1,0 +1,200 @@
+.create-lesson-page {
+  min-height: 100vh;
+  background: #f7f5fb;
+  padding: 30px 40px;
+}
+
+/* Header */
+
+.create-lesson-header {
+  margin-bottom: 25px;
+}
+
+.create-lesson-header h1 {
+  margin: 18px 0 6px;
+  color: #30204f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.create-lesson-header p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+}
+
+/* Back button */
+
+.create-lesson-header .back-button {
+  border: none;
+  background: transparent;
+  color: #6b3fa0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.create-lesson-header .back-button:hover {
+  color: #4f2b7c;
+}
+
+/* Form Card */
+
+.create-lesson-page .lesson-form-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+}
+
+/* Form Grid */
+
+.create-lesson-page .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* Form Group */
+
+.create-lesson-page .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-lesson-page .form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+
+.create-lesson-page .form-group label {
+  margin-bottom: 8px;
+  color: #3d3150;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Inputs */
+
+.create-lesson-page .form-group input,
+.create-lesson-page .form-group textarea,
+.create-lesson-page .form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd5e8;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #333;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.create-lesson-page .form-group input,
+.create-lesson-page .form-group select {
+  height: 46px;
+  padding: 0 14px;
+}
+
+.create-lesson-page .form-group textarea {
+  padding: 12px 14px;
+  resize: vertical;
+  min-height: 90px;
+}
+
+.create-lesson-page .form-group input::placeholder,
+.create-lesson-page .form-group textarea::placeholder {
+  color: #aaa;
+}
+
+/* Focus */
+
+.create-lesson-page .form-group input:focus,
+.create-lesson-page .form-group textarea:focus,
+.create-lesson-page .form-group select:focus {
+  border-color: #6b3fa0;
+  box-shadow: 0 0 0 3px rgba(107, 63, 160, 0.10);
+}
+
+/* Buttons */
+
+.create-lesson-page .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid #eee8f4;
+}
+
+.create-lesson-page .cancel-button,
+.create-lesson-page .save-lesson-button {
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Cancel */
+
+.create-lesson-page .cancel-button {
+  background: #ffffff;
+  border: 1px solid #d9d0e5;
+  color: #5d5368;
+}
+
+.create-lesson-page .cancel-button:hover {
+  background: #f7f4fa;
+}
+
+/* Save */
+
+.create-lesson-page .save-lesson-button {
+  background: #6b3fa0;
+  border: 1px solid #6b3fa0;
+  color: #ffffff;
+}
+
+.create-lesson-page .save-lesson-button:hover {
+  background: #58328a;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .create-lesson-page {
+    padding: 20px;
+  }
+
+  .create-lesson-header h1 {
+    font-size: 25px;
+  }
+
+  .create-lesson-page .lesson-form-card {
+    padding: 20px;
+  }
+
+  .create-lesson-page .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-lesson-page .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .create-lesson-page .form-actions {
+    flex-direction: column;
+  }
+
+  .create-lesson-page .cancel-button,
+  .create-lesson-page .save-lesson-button {
+    width: 100%;
+  }
+}

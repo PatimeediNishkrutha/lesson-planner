@@ -1,0 +1,148 @@
+.hod-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #172554;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.hod-sidebar-brand {
+  height: 78px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.hod-brand-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #172554;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.hod-brand-text h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hod-brand-text span {
+  display: block;
+  margin-top: 3px;
+  color: #bfdbfe;
+  font-size: 11px;
+}
+
+.hod-sidebar-nav {
+  flex: 1;
+  padding: 24px 14px;
+  overflow-y: auto;
+}
+
+.hod-sidebar-title {
+  margin: 0 12px 12px;
+  color: #93c5fd;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hod-sidebar-item {
+  width: 100%;
+  min-height: 46px;
+  margin-bottom: 6px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #dbeafe;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.hod-sidebar-item:hover {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.hod-sidebar-item.active {
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.hod-sidebar-label {
+  flex: 1;
+}
+
+.hod-sidebar-bottom {
+  padding: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hod-sidebar-bottom .hod-sidebar-item {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .hod-sidebar {
+    width: 220px;
+  }
+
+  .hod-sidebar-brand {
+    padding: 0 15px;
+  }
+
+  .hod-sidebar-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hod-sidebar {
+    width: 70px;
+  }
+
+  .hod-sidebar-brand {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .hod-brand-text,
+  .hod-sidebar-title,
+  .hod-sidebar-label {
+    display: none;
+  }
+
+  .hod-sidebar-item {
+    justify-content: center;
+    padding: 0;
+  }
+}

@@ -1,0 +1,634 @@
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   TEACHER DASHBOARD MAIN LAYOUT
+========================================= */
+
+.teacher-dashboard-layout {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  display: flex;
+
+  overflow: hidden;
+
+  background: #f7f8fc;
+  color: #20205c;
+}
+
+/* =========================================
+   SIDEBAR LAYOUT
+========================================= */
+
+.teacher-dashboard-layout > .dashboard-sidebar {
+  flex: 0 0 240px;
+
+  width: 240px;
+  min-width: 240px;
+
+  height: 100vh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   COLLAPSED SIDEBAR
+========================================= */
+
+.teacher-dashboard-layout.sidebar-collapsed
+  > .dashboard-sidebar {
+  flex: 0 0 76px;
+
+  width: 76px;
+  min-width: 76px;
+}
+
+/* =========================================
+   TEACHER DASHBOARD MAIN AREA
+========================================= */
+
+.teacher-dashboard-main {
+  flex: 1 1 auto;
+
+  width: 0;
+  min-width: 0;
+
+  height: 100vh;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #f7f8fc;
+}
+
+/* =========================================
+   RIGHT-SIDE CONTENT
+   ONLY THIS AREA SCROLLS
+========================================= */
+
+.teacher-dashboard-content {
+  flex: 1 1 auto;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  padding: 28px 32px 40px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+}
+
+/* =========================================
+   CONTENT CHILDREN
+========================================= */
+
+.teacher-dashboard-content > * {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+/* =========================================
+   MAIN LESSON PLANNER
+========================================= */
+
+.lesson-planner {
+  width: 100%;
+  min-height: 100%;
+
+  background: #f7f6fc;
+  color: #20205c;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.planner-header {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #ebe8f5;
+
+  box-shadow: 0 2px 12px rgba(60, 50, 120, 0.05);
+}
+
+.planner-header-content {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  padding: 24px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.planner-header h1 {
+  margin: 0;
+
+  color: #20205c;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.planner-header p {
+  margin: 6px 0 0;
+
+  color: #77738e;
+
+  font-size: 15px;
+}
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.icon-button,
+.profile-button {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #f0edff;
+  color: #5b4bc4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.icon-button:hover,
+.profile-button:hover {
+  background: #e7e1ff;
+
+  transform: translateY(-2px);
+}
+
+.icon-button svg,
+.profile-button svg {
+  font-size: 25px;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.planner-content {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  padding: 32px 30px 45px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   TODAY SECTION
+========================================= */
+
+.today-section {
+  width: 100%;
+
+  margin-bottom: 32px;
+}
+
+.today-card {
+  width: 100%;
+
+  border: none;
+  border-radius: 20px;
+
+  padding: 28px 32px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 24px rgba(60, 50, 120, 0.1);
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.today-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(60, 50, 120, 0.14);
+}
+
+.today-icon {
+  width: 64px;
+  height: 64px;
+
+  min-width: 64px;
+
+  border-radius: 18px;
+
+  background: #eee9ff;
+  color: #5b4bc4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.today-icon svg {
+  font-size: 34px;
+}
+
+.today-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.today-content h2 {
+  margin: 0 0 6px;
+
+  color: #20205c;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.today-content p {
+  margin: 0;
+
+  color: #6d6a86;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+.today-link {
+  color: #5b4bc4;
+
+  font-weight: 600;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   DASHBOARD SECTIONS
+========================================= */
+
+.dashboard-section {
+  width: 100%;
+
+  margin-bottom: 32px;
+}
+
+.section-title {
+  margin: 0 0 14px 4px;
+
+  color: #20205c;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================================
+   DASHBOARD GRIDS
+========================================= */
+
+.dashboard-grid {
+  width: 100%;
+
+  display: grid;
+
+  gap: 20px;
+}
+
+.dashboard-grid-three {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+.dashboard-grid-two {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+/* =========================================
+   DASHBOARD ACTION CARD
+========================================= */
+
+.dashboard-action {
+  width: 100%;
+
+  min-width: 0;
+  min-height: 145px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 6px 20px rgba(60, 50, 120, 0.09);
+
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dashboard-action:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(60, 50, 120, 0.14);
+}
+
+.dashboard-action-icon {
+  width: 56px;
+  height: 56px;
+
+  min-width: 56px;
+
+  border-radius: 16px;
+
+  background: #eee9ff;
+  color: #5b4bc4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-action-icon svg {
+  font-size: 28px;
+}
+
+.dashboard-action-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.dashboard-action-content h3 {
+  margin: 0 0 7px;
+
+  color: #20205c;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.dashboard-action-content p {
+  margin: 0;
+
+  color: #77738e;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   MY CLASSES
+========================================= */
+
+.my-classes-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 8px;
+
+  padding-bottom: 20px;
+}
+
+.my-classes-button {
+  border: 1px solid #ddd7f7;
+
+  background: #f7f5ff;
+
+  color: #5143b5;
+
+  border-radius: 12px;
+
+  padding: 12px 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.my-classes-button:hover {
+  background: #eee9ff;
+
+  transform: translateY(-2px);
+}
+
+.my-classes-button svg {
+  font-size: 22px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .dashboard-grid-three {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .planner-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .planner-header-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .teacher-dashboard-content {
+    padding: 24px 22px 35px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .planner-header-content {
+    padding: 20px 16px;
+  }
+
+  .planner-header h1 {
+    font-size: 24px;
+  }
+
+  .planner-header p {
+    font-size: 13px;
+  }
+
+  .planner-content {
+    padding: 24px 16px 35px;
+  }
+
+  .dashboard-grid-three,
+  .dashboard-grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .today-card {
+    padding: 22px;
+
+    gap: 15px;
+  }
+
+  .today-icon {
+    width: 54px;
+    height: 54px;
+
+    min-width: 54px;
+  }
+
+  .today-icon svg {
+    font-size: 29px;
+  }
+
+  .today-content h2 {
+    font-size: 19px;
+  }
+
+  .today-content p {
+    font-size: 13px;
+  }
+
+  .today-link {
+    display: none;
+  }
+
+  .dashboard-action {
+    min-height: 125px;
+
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .teacher-dashboard-content {
+    padding: 20px 16px 30px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .planner-header-content {
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .icon-button,
+  .profile-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dashboard-action {
+    padding: 18px;
+
+    gap: 14px;
+  }
+
+  .dashboard-action-icon {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+  }
+
+  .dashboard-action-icon svg {
+    font-size: 24px;
+  }
+
+  .dashboard-action-content h3 {
+    font-size: 16px;
+  }
+
+  .dashboard-action-content p {
+    font-size: 13px;
+  }
+}

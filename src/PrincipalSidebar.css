@@ -1,0 +1,418 @@
+/* =========================================================
+   PRINCIPAL SIDEBAR
+   ========================================================= */
+
+.principal-sidebar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 260px !important;
+  height: 100vh !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: #ffffff !important;
+
+  border-right: 1px solid #e5e7eb;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  box-sizing: border-box;
+
+  z-index: 9999;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.principal-sidebar-brand {
+  width: 100%;
+  height: 82px;
+
+  margin: 0;
+  padding: 0 22px;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #eef0f4;
+
+  flex-shrink: 0;
+}
+
+
+/* Q LOGO */
+
+.principal-brand-logo {
+  width: 42px;
+  height: 42px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex-shrink: 0;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #6366f1
+  ) !important;
+
+  color: #ffffff !important;
+
+  border-radius: 11px;
+
+  font-size: 21px !important;
+  font-weight: 800 !important;
+
+  box-shadow:
+    0 4px 12px rgba(79, 70, 229, 0.22);
+}
+
+
+/* BRAND TEXT */
+
+.principal-brand-text {
+  margin: 0;
+  padding: 0;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  min-width: 0;
+}
+
+.principal-brand-text h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #111827 !important;
+
+  font-size: 18px !important;
+  font-weight: 700 !important;
+
+  line-height: 1.2;
+}
+
+.principal-brand-text span {
+  display: block;
+
+  margin: 4px 0 0 !important;
+  padding: 0 !important;
+
+  color: #98a2b3 !important;
+
+  font-size: 11px !important;
+  font-weight: 500 !important;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.principal-sidebar-nav {
+  width: 100%;
+
+  margin: 0;
+  padding: 25px 14px 15px !important;
+
+  box-sizing: border-box;
+
+  flex: 1;
+
+  overflow-y: auto;
+}
+
+
+/* MAIN MENU */
+
+.principal-sidebar-title {
+  margin: 0 0 11px !important;
+
+  padding: 0 12px !important;
+
+  color: #98a2b3 !important;
+
+  font-size: 10px !important;
+  font-weight: 700 !important;
+
+  letter-spacing: 1.3px !important;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MENU BUTTON
+   ========================================================= */
+
+.principal-sidebar-item {
+  width: 100% !important;
+  height: 46px !important;
+
+  margin: 4px 0 !important;
+  padding: 0 13px !important;
+
+  box-sizing: border-box;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 13px;
+
+  border: 0 !important;
+  border-radius: 9px !important;
+
+  background: transparent !important;
+
+  color: #667085 !important;
+
+  font-family: inherit;
+
+  font-size: 14px !important;
+  font-weight: 500 !important;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+/* ICON */
+
+.principal-sidebar-icon {
+  width: 22px;
+  height: 22px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex-shrink: 0;
+}
+
+.principal-sidebar-icon svg {
+  width: 21px;
+  height: 21px;
+
+  font-size: 21px !important;
+}
+
+
+/* LABEL */
+
+.principal-sidebar-label {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  flex: 1;
+
+  color: inherit;
+
+  font-size: 14px !important;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.principal-sidebar-item:hover {
+  background: #f4f5ff !important;
+
+  color: #4f46e5 !important;
+}
+
+.principal-sidebar-item:hover
+.principal-sidebar-icon {
+  color: #4f46e5 !important;
+}
+
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.principal-sidebar-item.active {
+  position: relative;
+
+  background: #eef0ff !important;
+
+  color: #4f46e5 !important;
+
+  font-weight: 600 !important;
+}
+
+
+/* ACTIVE LEFT INDICATOR */
+
+.principal-sidebar-item.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 7px;
+  bottom: 7px;
+
+  width: 3px;
+
+  border-radius: 0 4px 4px 0;
+
+  background: #4f46e5;
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.principal-sidebar-bottom {
+  width: 100%;
+
+  margin: 0;
+  padding: 14px !important;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid #eef0f4;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SETTINGS
+   ========================================================= */
+
+.principal-sidebar-bottom
+.principal-sidebar-item:first-child {
+  margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   BACK TO ROLES
+   ========================================================= */
+
+.principal-sidebar-item.principal-logout {
+  margin-top: 5px !important;
+
+  color: #667085 !important;
+}
+
+.principal-sidebar-item.principal-logout:hover {
+  background: #fff1f2 !important;
+
+  color: #e11d48 !important;
+}
+
+.principal-sidebar-item.principal-logout:hover
+.principal-sidebar-icon {
+  color: #e11d48 !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.principal-sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.principal-sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.principal-sidebar-nav::-webkit-scrollbar-thumb {
+  background: #d0d5dd;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .principal-sidebar {
+    width: 70px !important;
+  }
+
+  .principal-sidebar-brand {
+    height: 70px;
+
+    padding: 0 !important;
+
+    justify-content: center;
+  }
+
+  .principal-brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .principal-brand-text {
+    display: none !important;
+  }
+
+  .principal-sidebar-nav {
+    padding: 20px 8px !important;
+  }
+
+  .principal-sidebar-title {
+    display: none;
+  }
+
+  .principal-sidebar-item {
+    height: 46px !important;
+
+    padding: 0 !important;
+
+    justify-content: center !important;
+
+    gap: 0;
+  }
+
+  .principal-sidebar-label {
+    display: none;
+  }
+
+  .principal-sidebar-bottom {
+    padding: 10px 8px !important;
+  }
+}

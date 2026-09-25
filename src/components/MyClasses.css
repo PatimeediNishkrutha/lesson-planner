@@ -1,0 +1,150 @@
+.my-classes-page {
+  min-height: 100vh;
+  background: #f7f5fb;
+  padding: 30px 40px;
+}
+
+/* Header */
+
+.my-classes-header {
+  margin-bottom: 30px;
+}
+
+.my-classes-header .back-button {
+  border: none;
+  background: transparent;
+  color: #6b3fa0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.my-classes-header .back-button:hover {
+  color: #4f2b7c;
+}
+
+.my-classes-header h1 {
+  margin: 18px 0 6px;
+  color: #30204f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.my-classes-header p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+}
+
+/* Classes Grid */
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Class Card */
+
+.class-card {
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+  transition: 0.2s;
+}
+
+.class-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(70, 45, 100, 0.12);
+}
+
+/* Card Top */
+
+.class-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.class-card-top h2 {
+  margin: 0;
+  color: #30204f;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.class-card-top span {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #e4f6ea;
+  color: #238443;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Description */
+
+.class-card p {
+  margin: 16px 0 20px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Class Information */
+
+.class-info {
+  display: flex;
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee8f4;
+}
+
+.class-info span {
+  color: #5d5368;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .classes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-classes-page {
+    padding: 20px;
+  }
+
+  .my-classes-header h1 {
+    font-size: 25px;
+  }
+
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.add-class-button {
+  margin-top: 18px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #6b3fa0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-class-button:hover {
+  background: #58328a;
+}

@@ -1,0 +1,238 @@
+.learning-objectives-page {
+  min-height: 100vh;
+  background: #f7f5fb;
+  padding: 30px 40px;
+}
+
+.learning-objectives-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.learning-objectives-header .back-button {
+  border: none;
+  background: transparent;
+  color: #6b3fa0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.learning-objectives-header .back-button:hover {
+  color: #4f2b7c;
+}
+
+.learning-objectives-header h1 {
+  margin: 18px 0 6px;
+  color: #30204f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.learning-objectives-header p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+}
+
+.add-objective-button {
+  border: none;
+  border-radius: 8px;
+  background: #6b3fa0;
+  color: #ffffff;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-objective-button:hover {
+  background: #58328a;
+}
+
+.objective-form-card {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+}
+
+.objective-form-card h2 {
+  margin: 0 0 22px;
+  color: #30204f;
+  font-size: 21px;
+}
+
+.objective-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #403650;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd5e7;
+  border-radius: 8px;
+  padding: 11px 12px;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #403650;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #6b3fa0;
+  box-shadow: 0 0 0 2px rgba(107, 63, 160, 0.08);
+}
+
+.objective-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.cancel-button,
+.save-objective-button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background: #eeeaf3;
+  color: #5d5368;
+}
+
+.cancel-button:hover {
+  background: #e3ddea;
+}
+
+.save-objective-button {
+  background: #6b3fa0;
+  color: #ffffff;
+}
+
+.save-objective-button:hover {
+  background: #58328a;
+}
+
+.objectives-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.objective-card {
+  background: #ffffff;
+  border: 1px solid #ebe5f2;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 18px rgba(70, 45, 100, 0.08);
+}
+
+.objective-card-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee8f4;
+}
+
+.objective-card-header h2 {
+  margin: 0 0 6px;
+  color: #30204f;
+  font-size: 19px;
+}
+
+.objective-card-header p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.objective-section {
+  margin-top: 18px;
+}
+
+.objective-section h3 {
+  margin: 0 0 7px;
+  color: #6b3fa0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.objective-section p {
+  margin: 0;
+  color: #5d5368;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .learning-objectives-page {
+    padding: 20px;
+  }
+
+  .learning-objectives-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-objective-button {
+    width: 100%;
+  }
+
+  .objective-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .objectives-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .learning-objectives-header h1 {
+    font-size: 25px;
+  }
+
+  .objective-form-card,
+  .objective-card {
+    padding: 18px;
+  }
+}

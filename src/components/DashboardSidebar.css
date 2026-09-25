@@ -1,0 +1,532 @@
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE / ROOT
+========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD LAYOUT
+========================================================= */
+
+.dashboard-layout {
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.dashboard-sidebar {
+  width: 240px;
+  min-width: 240px;
+  max-width: 240px;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  background: #111a2e;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  flex: 0 0 240px;
+
+  transition:
+    width 0.25s ease,
+    min-width 0.25s ease,
+    max-width 0.25s ease;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   COLLAPSED SIDEBAR
+========================================================= */
+
+.dashboard-sidebar-collapsed {
+  width: 76px;
+  min-width: 76px;
+  max-width: 76px;
+
+  flex-basis: 76px;
+}
+
+
+/* =========================================================
+   RIGHT-SIDE MAIN CONTENT
+========================================================= */
+
+.dashboard-main {
+  flex: 1 1 auto;
+
+  width: 0;
+  min-width: 0;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   RIGHT-SIDE CONTENT WRAPPER
+========================================================= */
+
+.dashboard-content {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.sidebar-brand {
+  min-height: 86px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 18px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  flex-shrink: 0;
+}
+
+.sidebar-brand-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+
+  border-radius: 12px;
+
+  background: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.sidebar-brand-text {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+.sidebar-brand-text h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.sidebar-brand-text span {
+  margin-top: 3px;
+
+  color: #aeb9d0;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   COLLAPSE BUTTON
+========================================================= */
+
+.sidebar-collapse-button {
+  position: absolute;
+
+  top: 68px;
+  right: -13px;
+
+  width: 28px;
+  height: 28px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #23304a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 1001;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.sidebar-collapse-button:hover {
+  background: #f1f5f9;
+}
+
+.sidebar-collapse-button svg {
+  font-size: 18px;
+}
+
+.sidebar-chevron-rotated {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   MODULE TITLE
+========================================================= */
+
+.sidebar-module-title {
+  padding: 24px 20px 10px;
+
+  color: #7f8eaa;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.9px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding: 4px 10px;
+
+  flex-shrink: 0;
+}
+
+.sidebar-menu-item {
+  width: 100%;
+  min-height: 44px;
+
+  padding: 9px 12px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #b9c5da;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.sidebar-menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+}
+
+.sidebar-menu-item-active {
+  background: #315ee8;
+
+  color: #ffffff;
+}
+
+.sidebar-menu-item-active:hover {
+  background: #315ee8;
+}
+
+.sidebar-menu-icon {
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-menu-icon svg {
+  font-size: 20px;
+}
+
+.sidebar-menu-label {
+  font-size: 14px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   COLLAPSED MENU
+========================================================= */
+
+.dashboard-sidebar-collapsed .sidebar-menu-item {
+  justify-content: center;
+
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dashboard-sidebar-collapsed .sidebar-menu {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.sidebar-profile {
+  margin-top: auto;
+
+  min-height: 74px;
+
+  padding: 14px 16px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  flex-shrink: 0;
+}
+
+.sidebar-profile-avatar {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+
+  border-radius: 50%;
+
+  background: #e9eefc;
+  color: #315ee8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+.sidebar-profile-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+.sidebar-profile-info strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.sidebar-profile-info span {
+  margin-top: 3px;
+
+  color: #8795ad;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SIDEBAR SCROLLBAR
+========================================================= */
+
+.dashboard-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+
+  border-radius: 10px;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   MAIN CONTENT SCROLLBAR
+========================================================= */
+
+.dashboard-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-main::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.dashboard-main::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 10px;
+}
+
+.dashboard-main::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .dashboard-sidebar {
+    width: 210px;
+    min-width: 210px;
+    max-width: 210px;
+
+    flex-basis: 210px;
+  }
+
+  .dashboard-sidebar-collapsed {
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+
+    flex-basis: 70px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .dashboard-sidebar {
+    width: 76px;
+    min-width: 76px;
+    max-width: 76px;
+
+    flex-basis: 76px;
+  }
+
+  .sidebar-brand {
+    justify-content: center;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .sidebar-brand-text,
+  .sidebar-module-title,
+  .sidebar-menu-label,
+  .sidebar-profile-info {
+    display: none;
+  }
+
+  .sidebar-menu-item {
+    justify-content: center;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sidebar-profile {
+    justify-content: center;
+
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .sidebar-collapse-button {
+    display: none;
+  }
+}
